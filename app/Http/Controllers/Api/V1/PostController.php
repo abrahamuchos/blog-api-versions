@@ -69,7 +69,11 @@ class PostController extends Controller
         if (!$post->trashed()) {
             $postDeleted = $post->delete();
         }
-        return response()->json($post, 204);
+        return response()->json([
+            'status' => 'sucess',
+            'message' => 'post was deleted',
+            'post' => $post
+        ]);
     }
 
 
@@ -85,7 +89,11 @@ class PostController extends Controller
 
         if (!is_null($post) && $post->trashed()) {
             $post->forceDelete();
-            return response()->json($post);
+            return response()->json([
+                'status' => 'sucess',
+                'message' => 'post was deleted',
+                'post' => $post
+            ]);
         } else {
             return response()->json([
                 'error' => 23213,
