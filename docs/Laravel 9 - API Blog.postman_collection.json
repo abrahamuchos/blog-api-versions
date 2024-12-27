@@ -1,0 +1,1066 @@
+{
+	"info": {
+		"_postman_id": "7d477a09-0662-4585-af97-0f3c325522d1",
+		"name": "Laravel 9 - API Blog",
+		"description": "Blog API is a testing project or guide for route versioning in Laravel 9. Its goal is not to be a complete Blog system but a small blog that can have versioning in its API.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6168326"
+	},
+	"item": [
+		{
+			"name": "V2",
+			"item": [
+				{
+					"name": "Post by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|s0gIXqcAF7nprqRpyWHDBBAlPzKY7krv36393poM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url_v2}}/posts/4",
+							"host": [
+								"{{url_v2}}"
+							],
+							"path": [
+								"posts",
+								"4"
+							]
+						},
+						"description": "### Get Post by ID\n\nThis endpoint retrieves a specific post by its ID.\n\n#### Response\n\nThe response will be a JSON object with the following schema:\n\n``` json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"data\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"id\": {\n          \"type\": \"integer\"\n        },\n        \"post_name\": {\n          \"type\": \"string\"\n        },\n        \"slug\": {\n          \"type\": \"string\"\n        },\n        \"content\": {\n          \"type\": \"string\"\n        },\n        \"autor\": {\n          \"type\": \"object\",\n          \"properties\": {\n            \"name\": {\n              \"type\": \"string\"\n            },\n            \"email\": {\n              \"type\": \"string\"\n            }\n          }\n        },\n        \"created_at\": {\n          \"type\": [\"string\", \"null\"]\n        }\n      }\n    }\n  }\n}\n\n ```"
+					},
+					"response": [
+						{
+							"name": "Post by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer 1|s0gIXqcAF7nprqRpyWHDBBAlPzKY7krv36393poM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/v2/posts/4",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v2",
+										"posts",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.7"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Dec 2024 14:43:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 4,\n        \"post_name\": \"Animi doloribus reprehenderit quidem impedit.\",\n        \"slug\": \"animi-doloribus-reprehenderit-quidem-impedit\",\n        \"content\": \"Quisquam ex in asperiores laudantium assumenda vitae. Corporis quaerat autem eaque dolores omnis. Iste est ipsum fuga sequi ex. Sed distinctio consequuntur laudantium et nulla maxime quia. Reiciendis tempora magni fuga pariatur. Incidunt facere est est. Vel et occaecati totam aut saepe. Molestiae error velit et dolores debitis labore. Cupiditate molestias hic tempore explicabo cum. Accusantium rerum ea adipisci explicabo debitis. Atque sint animi voluptatem numquam voluptates eum quis. Qui unde ut rerum nulla. Consectetur doloribus voluptatem saepe vel est. Rerum qui sequi consequatur harum rerum. Fuga aut quo voluptas suscipit natus exercitationem sint. Expedita asperiores consequatur numquam. Enim praesentium voluptas voluptate unde quaerat ut inventore. Maxime maiores necessitatibus quis facilis consequuntur iusto. Nesciunt fuga consequatur mollitia id voluptas. Itaque laudantium necessitatibus est ut. Dignissimos aut eius sunt amet maxime architecto beatae similique. Vitae ratione cumque eius ut eligendi quia. Reprehenderit eius suscipit numquam et eum. Ut tempore laborum corporis. Quidem officia sed aspernatur tempore voluptatem similique. Dolorem et aut sed aut quia consequatur. Voluptatem et magnam iste et. Quis dolorem assumenda omnis sit facilis. Quam temporibus libero dolor nobis qui. Eum quas fuga qui iste in optio dolores. Quidem illo rerum facere cumque ut aut. Harum exercitationem temporibus et exercitationem. Libero esse molestiae similique.\",\n        \"autor\": {\n            \"name\": \"Prof. Carol Hintz\",\n            \"email\": \"rippin.crawford@example.org\"\n        },\n        \"created_at\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "All posts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url_v2}}/posts/",
+							"host": [
+								"{{url_v2}}"
+							],
+							"path": [
+								"posts",
+								""
+							]
+						},
+						"description": "### Get Posts\n\nThis endpoint retrieves a list of posts.\n\n#### Request\n\n- Method: `GET`\n    \n- URL: `{{url_v2}}/posts/`\n    \n\n#### Request Body\n\n- Type: form-data\n    \n- Description: No request body parameters are required for this request.\n    \n\n#### Response\n\nThe response for this request is a JSON object with the following schema:\n\n``` json\n{\n  \"data\": [\n    {\n      \"id\": \"number\",\n      \"post_name\": \"string\",\n      \"slug\": \"string\",\n      \"content\": \"string\",\n      \"author\": {\n        \"name\": \"string\",\n        \"email\": \"string\"\n      },\n      \"created_at\": \"string\"\n    }\n  ],\n  \"meta\": {\n    \"organization\": \"string\",\n    \"version\": \"string\",\n    \"authors\": [\"string\"],\n    \"type\": \"string\",\n    \"current_page\": \"number\",\n    \"from\": \"number\",\n    \"last_page\": \"number\",\n    \"links\": [\n      {\n        \"url\": \"string\",\n        \"label\": \"string\",\n        \"active\": \"boolean\"\n      }\n    ],\n    \"path\": \"string\",\n    \"per_page\": \"number\",\n    \"to\": \"number\",\n    \"total\": \"number\"\n  },\n  \"links\": {\n    \"first\": \"string\",\n    \"last\": \"string\",\n    \"prev\": \"string\",\n    \"next\": \"string\"\n  }\n}\n\n ```\n\n#### Response Examples\n\n``` json\n{\"data\": [ { \"id\": 0, \"post_name\": \"\", \"slug\": \"\", \"content\": \"\", \"author\": { \"name\": \"\", \"email\": \"\" }, \"created_at\": null }],\"meta\": { \"organization\": \"\", \"version\": \"\", \"authors\": [\"\"], \"type\": \"\", \"current_page\": 0, \"from\": 0, \"last_page\": 0, \"links\": [ { \"url\": null, \"label\": \"\", \"active\": true } ], \"path\": \"\", \"per_page\": 0, \"to\": 0, \"total\": 0},\"links\": { \"first\": \"\", \"last\": \"\", \"prev\": null, \"next\": \"\"}}\n ```"
+					},
+					"response": [
+						{
+							"name": "All posts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/api/v2/posts/",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v2",
+										"posts",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.7"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Dec 2024 14:44:13 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 2,\n            \"post_name\": \"Dignissimos dolorem aliquid in et ut beatae.\",\n            \"slug\": \"dignissimos-dolorem-aliquid-in-et-ut-beatae\",\n            \"content\": \"Voluptatem quia non ut. Et aut iure ducimus. Est recusandae necessitatibus voluptatum voluptatem consequatur unde qui. Qui quo dolorem accusamus ad natus. Illum atque quia iste cumque facere omnis eveniet dolor. Voluptatum ut et recusandae consequatur nam unde vero. Nulla non vero non maxime vel. Ut quae rem culpa quia consequatur odit sint ratione. Et molestiae magnam non a minima tempore quis. Eum et quia est quia sint veritatis quae. Eum consectetur molestias ipsum voluptatem quibusdam. Non placeat fugit quis corrupti. Officia et iusto enim. Aliquid cum molestiae aut sed fuga omnis. Officiis aut ducimus eveniet repellendus molestiae. Corporis consequatur ipsam sint ipsa praesentium sapiente error. Veniam nulla aliquid voluptatibus mollitia. Dolore minima officiis sed odit debitis quia adipisci. Est sunt sequi omnis ut tempora dignissimos. Sint facilis aut est natus quae. Quia voluptas ea magni sit eius enim ad nesciunt. Voluptatum vel qui qui sed eligendi. Placeat debitis rem ab. Consequatur eveniet aut veritatis consequatur quia. Perspiciatis ipsum nesciunt et. Iure et aut ratione aut unde. Consequuntur perspiciatis dolor veritatis ab omnis est. Dolores et inventore nesciunt rerum omnis tempora. Pariatur facilis omnis vero aperiam pariatur consequuntur. Enim distinctio dolores cumque minus et qui officiis. Minima harum quia voluptatem praesentium voluptate hic cupiditate. Expedita eos aut iusto sed. Molestias beatae magnam ab ut aliquam. Voluptas esse consequatur nobis enim consequuntur.\",\n            \"autor\": {\n                \"name\": \"Andy Towne\",\n                \"email\": \"kheidenreich@example.net\"\n            },\n            \"created_at\": null\n        },\n        {\n            \"id\": 3,\n            \"post_name\": \"Sunt et vero dolores praesentium quas vel.\",\n            \"slug\": \"sunt-et-vero-dolores-praesentium-quas-vel\",\n            \"content\": \"Officia veritatis earum aperiam consequatur. Ipsa eum quia fugit rem sed voluptas. Eligendi rerum corporis ipsa sunt distinctio nisi amet. Facilis nihil accusamus quaerat beatae vitae culpa. Eos accusantium impedit a velit. Delectus rerum consectetur velit iusto voluptates. Quidem quas impedit sint iure omnis alias. Vel et sint quibusdam est est temporibus harum. Et unde harum distinctio ut quaerat. Est impedit error dignissimos consectetur. Ullam dolorum id quaerat laboriosam. Blanditiis sequi exercitationem delectus. Quasi dolor fuga unde labore est consequatur optio. Error rerum quos quia dolor ut sit doloribus. Quidem unde inventore ex asperiores. Impedit non corporis impedit. Sunt aspernatur sunt est qui. Reprehenderit nostrum vitae ea ut quibusdam. Autem voluptatum aut est ut eveniet quidem reiciendis. Quos ut voluptatem animi recusandae et culpa. Ipsa magni praesentium placeat. Corporis iste ea id recusandae voluptates. Earum in neque a. Rerum atque voluptatem vel voluptatum. Magnam similique mollitia cumque doloribus expedita iure aperiam. Autem perferendis aut unde fugit sequi tempora. Tempora et ad est architecto. Iste est sed voluptatem veritatis. Sed laboriosam consectetur sequi magnam. Porro iure sequi omnis mollitia exercitationem commodi. Maiores ut amet maxime debitis. Eius corrupti eius voluptas itaque unde velit. Pariatur nam beatae totam voluptatum. Perferendis est ipsam consequuntur officia. Nostrum magnam molestiae ut est cum. Quam ea aspernatur at modi doloremque.\",\n            \"autor\": {\n                \"name\": \"Rhiannon Frami\",\n                \"email\": \"nils72@example.com\"\n            },\n            \"created_at\": null\n        },\n        {\n            \"id\": 4,\n            \"post_name\": \"Animi doloribus reprehenderit quidem impedit.\",\n            \"slug\": \"animi-doloribus-reprehenderit-quidem-impedit\",\n            \"content\": \"Quisquam ex in asperiores laudantium assumenda vitae. Corporis quaerat autem eaque dolores omnis. Iste est ipsum fuga sequi ex. Sed distinctio consequuntur laudantium et nulla maxime quia. Reiciendis tempora magni fuga pariatur. Incidunt facere est est. Vel et occaecati totam aut saepe. Molestiae error velit et dolores debitis labore. Cupiditate molestias hic tempore explicabo cum. Accusantium rerum ea adipisci explicabo debitis. Atque sint animi voluptatem numquam voluptates eum quis. Qui unde ut rerum nulla. Consectetur doloribus voluptatem saepe vel est. Rerum qui sequi consequatur harum rerum. Fuga aut quo voluptas suscipit natus exercitationem sint. Expedita asperiores consequatur numquam. Enim praesentium voluptas voluptate unde quaerat ut inventore. Maxime maiores necessitatibus quis facilis consequuntur iusto. Nesciunt fuga consequatur mollitia id voluptas. Itaque laudantium necessitatibus est ut. Dignissimos aut eius sunt amet maxime architecto beatae similique. Vitae ratione cumque eius ut eligendi quia. Reprehenderit eius suscipit numquam et eum. Ut tempore laborum corporis. Quidem officia sed aspernatur tempore voluptatem similique. Dolorem et aut sed aut quia consequatur. Voluptatem et magnam iste et. Quis dolorem assumenda omnis sit facilis. Quam temporibus libero dolor nobis qui. Eum quas fuga qui iste in optio dolores. Quidem illo rerum facere cumque ut aut. Harum exercitationem temporibus et exercitationem. Libero esse molestiae similique.\",\n            \"autor\": {\n                \"name\": \"Prof. Carol Hintz\",\n                \"email\": \"rippin.crawford@example.org\"\n            },\n            \"created_at\": null\n        },\n        {\n            \"id\": 5,\n            \"post_name\": \"Aut cupiditate perspiciatis necessitatibus ratione dicta dolore.\",\n            \"slug\": \"aut-cupiditate-perspiciatis-necessitatibus-ratione-dicta-dolore\",\n            \"content\": \"Et aliquid aut ut et. Eos eligendi optio ea omnis blanditiis. Praesentium autem provident recusandae veniam et nesciunt dolor. Ipsa qui placeat suscipit necessitatibus ipsam. Minus cumque quis est quae quia doloribus. Rem dolore sunt et voluptatibus harum quaerat. Deleniti assumenda est necessitatibus ut consequuntur. Excepturi voluptatem ut dolores harum ab. Maxime id vero quia quaerat. Ea et distinctio sunt enim. Voluptates velit blanditiis non voluptatem quia. Quidem perspiciatis aut et eius. Saepe ut sequi nihil voluptatibus et. Eum atque officiis sit enim id explicabo voluptates. Voluptas hic soluta dolor nesciunt ipsum ad animi. Ut quos at accusamus id quod blanditiis. Et placeat et ut. Et qui nihil neque quibusdam nihil hic eligendi. Tempore deleniti ipsa dolores assumenda neque ut. Molestias unde explicabo sit consectetur et. Mollitia ab adipisci non quasi excepturi commodi soluta quibusdam. Eveniet inventore voluptatem vitae sapiente odit tempore ipsum aspernatur. Et repellat magni iure veritatis modi aut ratione. Hic non laboriosam consequatur iure possimus ipsa illum. Delectus et soluta beatae laudantium saepe. Quis ratione ex magnam et autem aut aliquam. Ad voluptatem sed animi blanditiis perspiciatis et et sit. Ea et aliquam eveniet sunt. Architecto dolorem accusamus officia ex dicta quisquam. Sunt sit facere sit. Vero ipsa fuga facilis aut vel quo. Ut magni illo iusto. Nam officiis est nobis vel aut voluptatem maiores. Ea esse enim dolor cumque ipsam. Expedita ipsam dolores est facilis.\",\n            \"autor\": {\n                \"name\": \"Kiel Ryan\",\n                \"email\": \"bartell.rashawn@example.net\"\n            },\n            \"created_at\": null\n        },\n        {\n            \"id\": 6,\n            \"post_name\": \"Qui et aut id eligendi vero.\",\n            \"slug\": \"qui-et-aut-id-eligendi-vero\",\n            \"content\": \"Consequatur dicta voluptatem voluptatum accusamus. Cumque nulla rem magnam nihil. Est nesciunt libero voluptatem eveniet. Nemo possimus ut aut consequatur illum. Laborum quaerat quod quae animi. Sed in aut amet voluptas. Corporis sit aut inventore ut illo voluptas. Soluta officiis delectus praesentium eveniet aut. Rerum commodi odio reiciendis odit. Eum sint repellat possimus perspiciatis consequatur pariatur enim voluptas. Odio fugit est nostrum est minima libero culpa animi. Quos ut beatae nostrum et tempora. Quod sit aliquam placeat vero. Magnam accusantium commodi fugit quia autem et. Sed molestiae cum eos voluptatem quasi error ad possimus. Qui expedita natus dolor. Recusandae temporibus ipsum quia eius. Qui quis a minus praesentium autem necessitatibus quia necessitatibus. Eligendi laborum ut debitis ipsum quos. Incidunt quasi voluptatibus ducimus nemo. Rem unde alias esse consequatur laboriosam voluptas dolorum corrupti. Nihil non voluptatem et repudiandae odit id incidunt. Et dicta excepturi eos iste ut. Deleniti nisi omnis fugit odit non reiciendis. Ipsa alias reprehenderit necessitatibus eius deserunt voluptates. Animi explicabo aspernatur quis est. Nihil delectus voluptatem qui sed quo totam id. Velit incidunt quo et doloremque neque. Qui sint nam vero perspiciatis sint. Molestiae non aliquid nostrum asperiores recusandae aut accusantium. Ea veniam sunt rerum voluptatum. Tenetur neque eos unde fugit aut voluptas quasi. Delectus reprehenderit quibusdam quia impedit in.\",\n            \"autor\": {\n                \"name\": \"Rhiannon Frami\",\n                \"email\": \"nils72@example.com\"\n            },\n            \"created_at\": null\n        },\n        {\n            \"id\": 7,\n            \"post_name\": \"Atque facere asperiores excepturi qui.\",\n            \"slug\": \"atque-facere-asperiores-excepturi-qui\",\n            \"content\": \"Voluptatem molestiae id voluptatem. Non dolores fuga delectus voluptatibus enim. Nesciunt voluptatem enim accusantium autem ut aperiam qui. Fuga sint distinctio quaerat animi. Expedita adipisci deserunt aliquid labore. Consequatur atque aliquid officiis fuga. Tenetur ab et consequatur. Ut sint sint quo sapiente commodi. Optio laboriosam repellat totam quisquam illo enim laborum explicabo. Fuga pariatur doloribus qui occaecati rerum. Ducimus sed sint provident facilis laborum id praesentium. Ratione accusamus ullam necessitatibus iste laborum officiis. Id cum cumque voluptatum eius non. Quam alias odio dicta suscipit et inventore consequatur ipsa. Ut aut earum nesciunt ea. Consequuntur necessitatibus quibusdam ut mollitia amet. Voluptatem voluptatibus sed sed facilis. Voluptatibus nobis beatae et harum vero voluptatem maiores. Iste eos qui perferendis. Laboriosam facilis culpa eum praesentium error laborum. Quo dolores ullam fugit nostrum enim. Officia rerum porro accusamus fugit dolore eligendi consequatur libero. Eum architecto dolorem excepturi vero autem molestiae quo. Optio deleniti sunt praesentium id aut culpa ratione. Delectus quasi ad qui eligendi dolor corrupti. Velit placeat exercitationem suscipit vitae. Illum quis possimus quia soluta consequatur ut corporis. Rerum vero molestiae amet ducimus. Iste eum ex rem ut deserunt pariatur. Porro ad autem laboriosam facere accusantium hic. Exercitationem qui quo deleniti laudantium eum consectetur eligendi.\",\n            \"autor\": {\n                \"name\": \"Maryam Goyette\",\n                \"email\": \"roma65@example.org\"\n            },\n            \"created_at\": null\n        },\n        {\n            \"id\": 8,\n            \"post_name\": \"Delectus voluptatibus similique qui inventore deserunt.\",\n            \"slug\": \"delectus-voluptatibus-similique-qui-inventore-deserunt\",\n            \"content\": \"Odio aut cumque dolores consequatur ut. Qui est est aut libero. A ut sint ullam culpa. Quis qui sed et incidunt illo non rerum qui. Unde libero facilis eos. Exercitationem reprehenderit omnis ea nihil quam ad deserunt. Velit et et dolorem accusamus voluptates sed. Commodi blanditiis deserunt modi eveniet tempore. Laboriosam est quae atque voluptatibus sunt et et. Et amet nobis molestias dolorum ea. Voluptatem commodi eveniet porro non veritatis accusamus. Officiis totam eveniet non eius. Est consequatur esse omnis optio ipsam enim illum sed. Voluptate eum qui sit id officiis similique a. Aut a quae qui aspernatur aut ut. Totam et et excepturi autem. Est voluptatem autem nisi a nostrum modi et. Expedita aspernatur harum ut numquam. Optio laudantium et omnis quibusdam. Dolores voluptatibus eum impedit architecto corporis vero. Voluptatem quae maxime nisi dolores. Eveniet quam aut tempora autem et quas. Quae rerum voluptatibus aperiam voluptatem praesentium tempora nam possimus. Explicabo quibusdam et recusandae veritatis optio quasi. Est aspernatur consequatur et. Quo consequuntur tenetur aut consequatur. Sunt inventore vel omnis esse asperiores qui voluptas. Est sint non quia quam dolorum. Quis sunt nisi placeat nihil. Id ut non modi eos earum quia. Ea magnam consequuntur est nemo totam. Illum reiciendis perspiciatis similique. Eaque eum nobis voluptas. Ut aut doloremque vel inventore laudantium nam enim. Omnis adipisci dicta maxime quia est eum. Minus natus quasi esse fugit ipsa.\",\n            \"autor\": {\n                \"name\": \"Abraham Gonzalez\",\n                \"email\": \"abraham@mail.com\"\n            },\n            \"created_at\": null\n        },\n        {\n            \"id\": 9,\n            \"post_name\": \"Quibusdam sit ea qui facilis eveniet.\",\n            \"slug\": \"quibusdam-sit-ea-qui-facilis-eveniet\",\n            \"content\": \"Sunt nobis alias totam natus sed sunt est facilis. Aut esse eius voluptatem nihil tenetur minus quisquam. Voluptas veritatis et libero praesentium voluptatem. Odit dignissimos debitis excepturi et dolores. Voluptates qui similique et occaecati illum accusantium aut. Ut quod exercitationem dolorem. Et atque harum voluptas nesciunt accusamus ullam quidem. Facere aut aut sapiente architecto illum quod. Et rerum porro totam consectetur nulla accusamus quaerat veritatis. Officiis sequi ut consequatur voluptate numquam eligendi. Velit placeat omnis recusandae. Dolores provident aperiam saepe doloremque unde. Officiis qui aut dolorem voluptate nostrum eos. Necessitatibus dolores laudantium sit non voluptatem nostrum placeat. Et illo doloribus expedita. Eum iste hic beatae commodi enim vel ea. Autem repudiandae consequatur officia qui aut rerum placeat optio. Cumque et dolorem accusantium pariatur non. Quia aperiam non nulla alias enim optio minima odio. Aliquam architecto molestiae corporis aut minima vero quibusdam. Excepturi enim autem id et nihil. Tempore ex expedita laudantium beatae omnis. Quo id labore ut consequatur et vel. Error quas doloribus est culpa. Et odit beatae qui perspiciatis placeat perspiciatis. Quae minima ad modi veritatis aperiam amet. Ratione optio aperiam est doloremque saepe. Quos molestiae dolores deserunt quam consequatur consectetur voluptas. Natus reiciendis magni eum perspiciatis veritatis. Eligendi fugiat at blanditiis exercitationem ducimus expedita optio.\",\n            \"autor\": {\n                \"name\": \"Maryam Goyette\",\n                \"email\": \"roma65@example.org\"\n            },\n            \"created_at\": null\n        },\n        {\n            \"id\": 11,\n            \"post_name\": \"Aut adipisci totam ea et et necessitatibus.\",\n            \"slug\": \"aut-adipisci-totam-ea-et-et-necessitatibus\",\n            \"content\": \"Iste reiciendis eaque quibusdam eos. Quis laborum inventore adipisci dolore. Ratione iusto alias vel at corporis quam. Autem id voluptas rerum dolor totam eum sapiente. Odit aut voluptatem voluptatem vitae hic sed id. Tenetur perspiciatis est dolor natus voluptatem odio alias. Voluptatem officia velit culpa quisquam. Officiis molestiae quasi quia aut. Ut distinctio magni fuga consequatur dignissimos quo qui asperiores. Praesentium expedita ipsum esse dolore. Necessitatibus harum minima veritatis sequi. Numquam qui similique adipisci expedita et. Quo nostrum facere officiis corrupti vel. Ducimus debitis est possimus aspernatur pariatur rerum sint. Cumque consequatur voluptatem sit voluptatibus sit autem ut. Qui qui beatae voluptatem impedit nam. Et unde deleniti aperiam quis sed. Atque suscipit ducimus est sit possimus delectus quia. Doloribus dolor dolorem ducimus quibusdam. Nesciunt dolorem laboriosam et voluptatum. Qui corporis pariatur hic voluptatem suscipit ipsam error. Eos minus quod expedita velit ut dicta est. Ut eligendi perspiciatis a non ducimus occaecati. Aut maxime amet et aut aut atque. Ipsum debitis nihil soluta quia et saepe tempore. Voluptas beatae nihil accusamus. Cum sit optio ut consectetur iusto quibusdam. Laudantium quae minus est atque voluptas. Asperiores et nihil commodi eius. Non incidunt ut quo debitis voluptates. Ullam a atque quasi quia quia. Officia voluptates labore porro nostrum voluptas corporis repellat. Voluptatem similique qui sunt consequatur. Fugiat ipsam et officia omnis consequatur qui.\",\n            \"autor\": {\n                \"name\": \"Prof. Carol Hintz\",\n                \"email\": \"rippin.crawford@example.org\"\n            },\n            \"created_at\": null\n        },\n        {\n            \"id\": 12,\n            \"post_name\": \"In dolores eum amet est repudiandae doloremque.\",\n            \"slug\": \"in-dolores-eum-amet-est-repudiandae-doloremque\",\n            \"content\": \"Et labore facilis aliquid veniam nobis fugiat. Minima quae cum rem porro sunt voluptas. Delectus et autem quis quia voluptates. Et magni maiores molestias voluptas sapiente quaerat. Ducimus voluptatem cum nobis sed eum et ut dolores. Neque incidunt voluptatem ut in aut provident. Ipsam repudiandae blanditiis earum in nihil. Numquam dignissimos id quos dicta. Cum illo ea quibusdam voluptates. Est consequatur tempore unde. Nesciunt et cupiditate itaque quae aspernatur sequi. Porro placeat distinctio adipisci architecto error labore. Sequi cum similique velit ex. Quidem veniam doloremque alias quos consequuntur. Rem debitis exercitationem nihil autem vero. Dicta voluptas quia ullam animi cum alias qui. Ad dolores quis sapiente alias. Repellat molestiae illo pariatur accusamus fuga cupiditate et. Molestias repellat voluptas commodi. Iste sit cum earum voluptatibus magni sunt distinctio. Veniam consequatur itaque id dolores. Non assumenda natus est totam. Deleniti corrupti expedita soluta consequatur id. Quia placeat sequi aut illum magnam odit sed. Voluptatum est ipsam voluptate et ipsam. Id voluptatem laudantium eveniet. Quasi ea nostrum dolorem ratione qui modi. Quo voluptas dicta vel similique nihil. Et mollitia suscipit libero beatae. In delectus ratione quia enim quia repellat. Et cum vel omnis hic et voluptates tempora aspernatur. Sint architecto est repellendus velit dolore animi nihil dolor. Ut dolorum saepe aut illo explicabo. Non quae voluptas tempora facilis dolorem hic doloremque. Dolores eligendi temporibus laboriosam rerum error sint deleniti.\",\n            \"autor\": {\n                \"name\": \"Marcel Hegmann\",\n                \"email\": \"shaniya.kerluke@example.org\"\n            },\n            \"created_at\": null\n        },\n        {\n            \"id\": 13,\n            \"post_name\": \"Commodi occaecati corrupti qui minima esse adipisci.\",\n            \"slug\": \"commodi-occaecati-corrupti-qui-minima-esse-adipisci\",\n            \"content\": \"Ipsum qui exercitationem quibusdam voluptatem voluptatem vel quia odio. Natus rerum assumenda sit et et distinctio non. Voluptas dolorem omnis eius. Voluptatibus ipsum ad ut sit quas eveniet. Cupiditate autem nam dicta id. Fugit quia velit culpa rerum optio ipsa dolorum. Esse eveniet vero consequatur eum. Dolorum omnis neque dolorum et ut dolor. At magnam est distinctio omnis voluptates. Porro ut quae et qui ut similique magnam consectetur. Dolorem sed aspernatur vel optio sequi odio. Aut velit non quaerat corporis. Ipsum minima velit sed eligendi distinctio. Et at inventore sint sequi. Esse officia occaecati officia saepe at dolorum. Sunt id non ut error esse id sunt. Ea cumque corrupti impedit nesciunt. Atque nisi saepe voluptates et quod excepturi non. Quos quasi hic eos quo eum. Ut eos consectetur earum voluptas eligendi quod qui. Quo qui modi recusandae ut accusamus est. Ut ut molestiae alias inventore. Laudantium officia pariatur molestias quia sapiente. Eos a asperiores et sunt id nulla aut. Commodi sit voluptas perferendis omnis expedita quia. Perferendis est ullam nemo impedit illo natus magni aperiam. Iste possimus quia maxime qui aliquid et iste. Sit quia aperiam est enim sit. Impedit dolore aut dolore suscipit aut qui quas. Id sint soluta molestias numquam dolor autem. A enim error sint illo sunt. Aut occaecati earum velit nemo voluptatem.\",\n            \"autor\": {\n                \"name\": \"Ms. Kaycee Kuphal\",\n                \"email\": \"sheila68@example.org\"\n            },\n            \"created_at\": null\n        },\n        {\n            \"id\": 14,\n            \"post_name\": \"Sed doloremque itaque earum non maiores eius.\",\n            \"slug\": \"sed-doloremque-itaque-earum-non-maiores-eius\",\n            \"content\": \"Sed autem in eum qui harum. Saepe ut nulla harum enim. Ex alias quia facere harum tempora quia commodi perferendis. Quae dolores iusto eaque sit expedita doloremque. Temporibus libero consequatur eos. Voluptas id esse perferendis aut illo qui. Et sint sit rerum quia iste qui aut. Vel aspernatur itaque omnis. Omnis autem consequatur earum eos corrupti est et sunt. Laboriosam quaerat adipisci expedita ipsum aliquid sed. Nostrum ad magni quibusdam numquam. Dolorem optio repudiandae et quae repudiandae asperiores qui. Beatae aut excepturi vel accusantium velit. Autem nesciunt reiciendis nostrum quo perferendis doloremque magnam eos. Error deleniti animi maxime impedit aut voluptatem repudiandae. Quidem quas unde nemo. Odit aut minima eaque non maxime. Et animi quia corrupti similique corrupti similique. Est cumque iure reprehenderit aut. Perferendis est sunt quia delectus. Quia consequuntur occaecati et et ullam. Sint totam eos aspernatur deleniti ad vitae rem. Illum sint quia deserunt iure incidunt est dolores. Doloremque ut quaerat consequuntur et molestiae quam. Nihil consequuntur autem veniam dicta sunt temporibus. Alias amet velit at consequatur consequatur. Veritatis eaque laudantium pariatur sed corporis. Possimus enim ut cum maxime sequi accusamus. Provident a ex voluptatem et quos similique praesentium. Omnis fugit qui tenetur voluptates totam. Dolorem consequuntur nihil deserunt explicabo natus accusamus quia. Voluptatem quam molestiae et. Nemo aperiam voluptates id deleniti nisi. Atque enim odit aut animi voluptate temporibus ea.\",\n            \"autor\": {\n                \"name\": \"Andy Towne\",\n                \"email\": \"kheidenreich@example.net\"\n            },\n            \"created_at\": null\n        },\n        {\n            \"id\": 15,\n            \"post_name\": \"Doloribus voluptas in rem corporis sed asperiores.\",\n            \"slug\": \"doloribus-voluptas-in-rem-corporis-sed-asperiores\",\n            \"content\": \"Sequi soluta expedita aut sit laudantium voluptatem. Deleniti autem vel expedita sequi consequatur sint. Consequuntur perspiciatis harum aut eum consequuntur aspernatur atque. Repudiandae corrupti quia dolores doloremque minus. Dolore iusto et laboriosam unde. Quas expedita dolorum sequi repudiandae nobis. At fugiat et iste non ut tenetur dolorem quis. Quibusdam in dolorem enim voluptatem. Voluptates ab cum eligendi rem voluptate a ut. Impedit sit ab est assumenda quibusdam. Ipsa mollitia soluta unde et. Dicta ut veritatis aut. Et sed dolores ab fuga enim voluptas facere. Ea fuga voluptas ut. In optio possimus aperiam rem. Sequi dolores excepturi aut eius ratione. Dignissimos voluptatibus velit eligendi omnis. Atque reprehenderit aut possimus iste ut officia est. Magnam eveniet maiores perferendis maiores minus eius similique. Consequatur optio sed repellendus rerum. Sint dolorum et modi omnis doloribus eos. Officiis quae sit consectetur consectetur aliquam fuga. Illum ut doloribus fugiat quae quidem. Totam sunt nobis asperiores molestiae aliquid. Ut eligendi porro molestiae officiis vero. Et et modi nam ea eum. Quis deserunt voluptatem facilis ducimus labore aspernatur ut. Ipsam ratione rerum eos quia quibusdam autem ducimus. Labore illum ratione error dolores mollitia. Est impedit et et. Possimus ut et voluptates minima. Rerum voluptatibus ut minus accusantium. Quibusdam possimus autem optio repellat ipsa. Maxime tempore porro non reprehenderit asperiores. Adipisci tenetur beatae et ratione. Voluptatem exercitationem nisi non ullam.\",\n            \"autor\": {\n                \"name\": \"Andy Towne\",\n                \"email\": \"kheidenreich@example.net\"\n            },\n            \"created_at\": null\n        },\n        {\n            \"id\": 16,\n            \"post_name\": \"Consequatur odit placeat autem rerum enim.\",\n            \"slug\": \"consequatur-odit-placeat-autem-rerum-enim\",\n            \"content\": \"Ipsum quis aut sapiente veniam et nobis. Id dolores iusto voluptatem beatae sint. Sit hic quo doloribus officia ipsa officia eos. Sit a atque voluptas fuga laboriosam. Qui tenetur est enim consequuntur illum sed error. Laborum ut libero cupiditate voluptate. Quod voluptatem minima dicta qui cumque. Assumenda ut a porro qui. Rem ipsa omnis aut recusandae. Dolores quo quo aut officia. Enim quidem atque qui voluptas eligendi amet quibusdam. Nam ipsam eum officiis quo et. A veniam et vitae nesciunt et quaerat. Magni sint dolorum qui dolorem nulla dignissimos consectetur. Voluptatem amet sint id voluptatem. Harum eligendi totam minus veritatis. Aut repellat at exercitationem illo. Molestiae id aut quia qui natus error non. Necessitatibus et maxime nisi nihil ipsam consequuntur. Laborum sunt aliquid ea perspiciatis. Omnis voluptatem enim non voluptatem enim vel a maiores. Et est iusto vitae. Dolores libero aut ratione perferendis eveniet. Perferendis eius voluptatem cum. Dolores et nemo eaque vitae accusantium. Vitae omnis qui porro sapiente delectus aut architecto. Quia dolor quod temporibus sed eos soluta omnis maiores. Similique tenetur molestiae libero vitae cupiditate voluptas dolor. Veritatis et reprehenderit dolor doloribus qui. Voluptatibus eveniet amet et corporis numquam. Omnis laudantium et animi quo quidem ut soluta. Voluptatem accusamus fugiat dolores pariatur architecto. Quae voluptatum labore quo assumenda quos aliquid. Ducimus occaecati rerum non.\",\n            \"autor\": {\n                \"name\": \"Kiel Ryan\",\n                \"email\": \"bartell.rashawn@example.net\"\n            },\n            \"created_at\": null\n        },\n        {\n            \"id\": 1,\n            \"post_name\": \"Impedit laborum expedita id illo praesentium provident.\",\n            \"slug\": \"impedit-laborum-expedita-id-illo-praesentium-provident\",\n            \"content\": \"Aut illum odio velit magnam. Esse sint in unde qui praesentium. Asperiores quia rem et impedit et omnis. Illum corporis et dolores explicabo recusandae. Veniam suscipit consequatur tenetur est sed. Nobis rerum cum occaecati aut a. Distinctio earum voluptatem similique ea suscipit eaque ut eum. Aliquam rem et cupiditate. Cumque temporibus sequi animi et. Et eum repellendus qui aspernatur officiis. Nulla et voluptatum impedit omnis distinctio quos harum porro. Rerum soluta molestiae sed praesentium. Est sint optio ut provident quisquam saepe quos. Temporibus aut pariatur voluptate exercitationem autem est. Et quam sunt numquam et dolores ducimus. Ipsa sit alias quis. Tenetur pariatur voluptas exercitationem ut praesentium in modi. Quia aut aut velit rerum dolorem. Odit dolorem id voluptas non sequi. Eaque recusandae magnam maxime tempore recusandae eveniet veniam. Et molestias explicabo facere magnam dolor autem et. Magni occaecati iure corrupti nulla enim dolores illo. Odit labore totam assumenda doloremque et autem. Consectetur reprehenderit dolor odio provident est. Fugit saepe et dolores occaecati veniam id commodi. Omnis qui officia totam voluptas rerum eveniet. Tempore explicabo blanditiis quo laboriosam nemo. Eaque et et eaque amet nobis ut et. Sint labore rem aut officia. Sit accusantium qui illo et. Harum quo similique ea in aut impedit exercitationem. Voluptatem et repellat suscipit sunt qui modi qui. Ut at non fugiat sed modi nemo ipsam. Error qui sunt tempora aut omnis sint magnam quas. Nam in perspiciatis qui saepe est inventore molestias.\",\n            \"autor\": {\n                \"name\": \"Ms. Kaycee Kuphal\",\n                \"email\": \"sheila68@example.org\"\n            },\n            \"created_at\": null\n        }\n    ],\n    \"meta\": {\n        \"organization\": \"Platzi\",\n        \"version\": \"2\",\n        \"authors\": [\n            \"J. Abraham Gonzalez\",\n            \"Platzi\"\n        ],\n        \"type\": \"articles\",\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 8,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v2/posts?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v2/posts?page=2\",\n                \"label\": \"2\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v2/posts?page=3\",\n                \"label\": \"3\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v2/posts?page=4\",\n                \"label\": \"4\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v2/posts?page=5\",\n                \"label\": \"5\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v2/posts?page=6\",\n                \"label\": \"6\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v2/posts?page=7\",\n                \"label\": \"7\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v2/posts?page=8\",\n                \"label\": \"8\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v2/posts?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost:8000/api/v2/posts\",\n        \"per_page\": 15,\n        \"to\": 15,\n        \"total\": 119\n    },\n    \"links\": {\n        \"first\": \"http://localhost:8000/api/v2/posts?page=1\",\n        \"last\": \"http://localhost:8000/api/v2/posts?page=8\",\n        \"prev\": null,\n        \"next\": \"http://localhost:8000/api/v2/posts?page=2\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "Version 2 to API blog"
+		},
+		{
+			"name": "V1",
+			"item": [
+				{
+					"name": "All Posts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url_v1}}/posts/4",
+							"host": [
+								"{{url_v1}}"
+							],
+							"path": [
+								"posts",
+								"4"
+							]
+						},
+						"description": "# Get Post Details\n\nThis endpoint retrieves the details of a specific post by providing the post ID in the URL.\n\n### Request\n\n- Method: GET\n    \n- URL: `{{url_v1}}/posts/4`\n    \n\n### Response\n\nThe response will include the details of the post with the provided ID, including the post's title, slug, excerpt, and content.\n\nExample response body:\n\n``` json\n{\n    \"data\": [\n        {\n            \"id\": 0,\n            \"title\": \"\",\n            \"slug\": \"\",\n            \"excerpt\": \"\",\n            \"content\": \"\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"\",\n        \"last\": \"\",\n        \"prev\": null,\n        \"next\": \"\"\n    },\n    \"meta\": {\n        \"current_page\": 0,\n        \"from\": 0,\n        \"last_page\": 0,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"\",\n                \"active\": true\n            }\n        ],\n        \"path\": \"\",\n        \"per_page\": 0,\n        \"to\": 0,\n        \"total\": 0\n    }\n}\n\n ```"
+					},
+					"response": [
+						{
+							"name": "All Posts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/v1/posts",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.7"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Dec 2024 14:38:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 2,\n            \"title\": \"Dignissimos dolorem aliquid in et ut beatae.\",\n            \"slug\": \"dignissimos-dolorem-aliquid-in-et-ut-beatae\",\n            \"excerpt\": \"Voluptatem quia non ut. Et aut iure ducimus. Est recusandae necessitatibus voluptatum voluptatem consequatur unde qui. Q\",\n            \"content\": \"Voluptatem quia non ut. Et aut iure ducimus. Est recusandae necessitatibus voluptatum voluptatem consequatur unde qui. Qui quo dolorem accusamus ad natus. Illum atque quia iste cumque facere omnis eveniet dolor. Voluptatum ut et recusandae consequatur nam unde vero. Nulla non vero non maxime vel. Ut quae rem culpa quia consequatur odit sint ratione. Et molestiae magnam non a minima tempore quis. Eum et quia est quia sint veritatis quae. Eum consectetur molestias ipsum voluptatem quibusdam. Non placeat fugit quis corrupti. Officia et iusto enim. Aliquid cum molestiae aut sed fuga omnis. Officiis aut ducimus eveniet repellendus molestiae. Corporis consequatur ipsam sint ipsa praesentium sapiente error. Veniam nulla aliquid voluptatibus mollitia. Dolore minima officiis sed odit debitis quia adipisci. Est sunt sequi omnis ut tempora dignissimos. Sint facilis aut est natus quae. Quia voluptas ea magni sit eius enim ad nesciunt. Voluptatum vel qui qui sed eligendi. Placeat debitis rem ab. Consequatur eveniet aut veritatis consequatur quia. Perspiciatis ipsum nesciunt et. Iure et aut ratione aut unde. Consequuntur perspiciatis dolor veritatis ab omnis est. Dolores et inventore nesciunt rerum omnis tempora. Pariatur facilis omnis vero aperiam pariatur consequuntur. Enim distinctio dolores cumque minus et qui officiis. Minima harum quia voluptatem praesentium voluptate hic cupiditate. Expedita eos aut iusto sed. Molestias beatae magnam ab ut aliquam. Voluptas esse consequatur nobis enim consequuntur.\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Sunt et vero dolores praesentium quas vel.\",\n            \"slug\": \"sunt-et-vero-dolores-praesentium-quas-vel\",\n            \"excerpt\": \"Officia veritatis earum aperiam consequatur. Ipsa eum quia fugit rem sed voluptas. Eligendi rerum corporis ipsa sunt dis\",\n            \"content\": \"Officia veritatis earum aperiam consequatur. Ipsa eum quia fugit rem sed voluptas. Eligendi rerum corporis ipsa sunt distinctio nisi amet. Facilis nihil accusamus quaerat beatae vitae culpa. Eos accusantium impedit a velit. Delectus rerum consectetur velit iusto voluptates. Quidem quas impedit sint iure omnis alias. Vel et sint quibusdam est est temporibus harum. Et unde harum distinctio ut quaerat. Est impedit error dignissimos consectetur. Ullam dolorum id quaerat laboriosam. Blanditiis sequi exercitationem delectus. Quasi dolor fuga unde labore est consequatur optio. Error rerum quos quia dolor ut sit doloribus. Quidem unde inventore ex asperiores. Impedit non corporis impedit. Sunt aspernatur sunt est qui. Reprehenderit nostrum vitae ea ut quibusdam. Autem voluptatum aut est ut eveniet quidem reiciendis. Quos ut voluptatem animi recusandae et culpa. Ipsa magni praesentium placeat. Corporis iste ea id recusandae voluptates. Earum in neque a. Rerum atque voluptatem vel voluptatum. Magnam similique mollitia cumque doloribus expedita iure aperiam. Autem perferendis aut unde fugit sequi tempora. Tempora et ad est architecto. Iste est sed voluptatem veritatis. Sed laboriosam consectetur sequi magnam. Porro iure sequi omnis mollitia exercitationem commodi. Maiores ut amet maxime debitis. Eius corrupti eius voluptas itaque unde velit. Pariatur nam beatae totam voluptatum. Perferendis est ipsam consequuntur officia. Nostrum magnam molestiae ut est cum. Quam ea aspernatur at modi doloremque.\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Animi doloribus reprehenderit quidem impedit.\",\n            \"slug\": \"animi-doloribus-reprehenderit-quidem-impedit\",\n            \"excerpt\": \"Quisquam ex in asperiores laudantium assumenda vitae. Corporis quaerat autem eaque dolores omnis. Iste est ipsum fuga se\",\n            \"content\": \"Quisquam ex in asperiores laudantium assumenda vitae. Corporis quaerat autem eaque dolores omnis. Iste est ipsum fuga sequi ex. Sed distinctio consequuntur laudantium et nulla maxime quia. Reiciendis tempora magni fuga pariatur. Incidunt facere est est. Vel et occaecati totam aut saepe. Molestiae error velit et dolores debitis labore. Cupiditate molestias hic tempore explicabo cum. Accusantium rerum ea adipisci explicabo debitis. Atque sint animi voluptatem numquam voluptates eum quis. Qui unde ut rerum nulla. Consectetur doloribus voluptatem saepe vel est. Rerum qui sequi consequatur harum rerum. Fuga aut quo voluptas suscipit natus exercitationem sint. Expedita asperiores consequatur numquam. Enim praesentium voluptas voluptate unde quaerat ut inventore. Maxime maiores necessitatibus quis facilis consequuntur iusto. Nesciunt fuga consequatur mollitia id voluptas. Itaque laudantium necessitatibus est ut. Dignissimos aut eius sunt amet maxime architecto beatae similique. Vitae ratione cumque eius ut eligendi quia. Reprehenderit eius suscipit numquam et eum. Ut tempore laborum corporis. Quidem officia sed aspernatur tempore voluptatem similique. Dolorem et aut sed aut quia consequatur. Voluptatem et magnam iste et. Quis dolorem assumenda omnis sit facilis. Quam temporibus libero dolor nobis qui. Eum quas fuga qui iste in optio dolores. Quidem illo rerum facere cumque ut aut. Harum exercitationem temporibus et exercitationem. Libero esse molestiae similique.\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Aut cupiditate perspiciatis necessitatibus ratione dicta dolore.\",\n            \"slug\": \"aut-cupiditate-perspiciatis-necessitatibus-ratione-dicta-dolore\",\n            \"excerpt\": \"Et aliquid aut ut et. Eos eligendi optio ea omnis blanditiis. Praesentium autem provident recusandae veniam et nesciunt \",\n            \"content\": \"Et aliquid aut ut et. Eos eligendi optio ea omnis blanditiis. Praesentium autem provident recusandae veniam et nesciunt dolor. Ipsa qui placeat suscipit necessitatibus ipsam. Minus cumque quis est quae quia doloribus. Rem dolore sunt et voluptatibus harum quaerat. Deleniti assumenda est necessitatibus ut consequuntur. Excepturi voluptatem ut dolores harum ab. Maxime id vero quia quaerat. Ea et distinctio sunt enim. Voluptates velit blanditiis non voluptatem quia. Quidem perspiciatis aut et eius. Saepe ut sequi nihil voluptatibus et. Eum atque officiis sit enim id explicabo voluptates. Voluptas hic soluta dolor nesciunt ipsum ad animi. Ut quos at accusamus id quod blanditiis. Et placeat et ut. Et qui nihil neque quibusdam nihil hic eligendi. Tempore deleniti ipsa dolores assumenda neque ut. Molestias unde explicabo sit consectetur et. Mollitia ab adipisci non quasi excepturi commodi soluta quibusdam. Eveniet inventore voluptatem vitae sapiente odit tempore ipsum aspernatur. Et repellat magni iure veritatis modi aut ratione. Hic non laboriosam consequatur iure possimus ipsa illum. Delectus et soluta beatae laudantium saepe. Quis ratione ex magnam et autem aut aliquam. Ad voluptatem sed animi blanditiis perspiciatis et et sit. Ea et aliquam eveniet sunt. Architecto dolorem accusamus officia ex dicta quisquam. Sunt sit facere sit. Vero ipsa fuga facilis aut vel quo. Ut magni illo iusto. Nam officiis est nobis vel aut voluptatem maiores. Ea esse enim dolor cumque ipsam. Expedita ipsam dolores est facilis.\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"Qui et aut id eligendi vero.\",\n            \"slug\": \"qui-et-aut-id-eligendi-vero\",\n            \"excerpt\": \"Consequatur dicta voluptatem voluptatum accusamus. Cumque nulla rem magnam nihil. Est nesciunt libero voluptatem eveniet\",\n            \"content\": \"Consequatur dicta voluptatem voluptatum accusamus. Cumque nulla rem magnam nihil. Est nesciunt libero voluptatem eveniet. Nemo possimus ut aut consequatur illum. Laborum quaerat quod quae animi. Sed in aut amet voluptas. Corporis sit aut inventore ut illo voluptas. Soluta officiis delectus praesentium eveniet aut. Rerum commodi odio reiciendis odit. Eum sint repellat possimus perspiciatis consequatur pariatur enim voluptas. Odio fugit est nostrum est minima libero culpa animi. Quos ut beatae nostrum et tempora. Quod sit aliquam placeat vero. Magnam accusantium commodi fugit quia autem et. Sed molestiae cum eos voluptatem quasi error ad possimus. Qui expedita natus dolor. Recusandae temporibus ipsum quia eius. Qui quis a minus praesentium autem necessitatibus quia necessitatibus. Eligendi laborum ut debitis ipsum quos. Incidunt quasi voluptatibus ducimus nemo. Rem unde alias esse consequatur laboriosam voluptas dolorum corrupti. Nihil non voluptatem et repudiandae odit id incidunt. Et dicta excepturi eos iste ut. Deleniti nisi omnis fugit odit non reiciendis. Ipsa alias reprehenderit necessitatibus eius deserunt voluptates. Animi explicabo aspernatur quis est. Nihil delectus voluptatem qui sed quo totam id. Velit incidunt quo et doloremque neque. Qui sint nam vero perspiciatis sint. Molestiae non aliquid nostrum asperiores recusandae aut accusantium. Ea veniam sunt rerum voluptatum. Tenetur neque eos unde fugit aut voluptas quasi. Delectus reprehenderit quibusdam quia impedit in.\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"Atque facere asperiores excepturi qui.\",\n            \"slug\": \"atque-facere-asperiores-excepturi-qui\",\n            \"excerpt\": \"Voluptatem molestiae id voluptatem. Non dolores fuga delectus voluptatibus enim. Nesciunt voluptatem enim accusantium au\",\n            \"content\": \"Voluptatem molestiae id voluptatem. Non dolores fuga delectus voluptatibus enim. Nesciunt voluptatem enim accusantium autem ut aperiam qui. Fuga sint distinctio quaerat animi. Expedita adipisci deserunt aliquid labore. Consequatur atque aliquid officiis fuga. Tenetur ab et consequatur. Ut sint sint quo sapiente commodi. Optio laboriosam repellat totam quisquam illo enim laborum explicabo. Fuga pariatur doloribus qui occaecati rerum. Ducimus sed sint provident facilis laborum id praesentium. Ratione accusamus ullam necessitatibus iste laborum officiis. Id cum cumque voluptatum eius non. Quam alias odio dicta suscipit et inventore consequatur ipsa. Ut aut earum nesciunt ea. Consequuntur necessitatibus quibusdam ut mollitia amet. Voluptatem voluptatibus sed sed facilis. Voluptatibus nobis beatae et harum vero voluptatem maiores. Iste eos qui perferendis. Laboriosam facilis culpa eum praesentium error laborum. Quo dolores ullam fugit nostrum enim. Officia rerum porro accusamus fugit dolore eligendi consequatur libero. Eum architecto dolorem excepturi vero autem molestiae quo. Optio deleniti sunt praesentium id aut culpa ratione. Delectus quasi ad qui eligendi dolor corrupti. Velit placeat exercitationem suscipit vitae. Illum quis possimus quia soluta consequatur ut corporis. Rerum vero molestiae amet ducimus. Iste eum ex rem ut deserunt pariatur. Porro ad autem laboriosam facere accusantium hic. Exercitationem qui quo deleniti laudantium eum consectetur eligendi.\"\n        },\n        {\n            \"id\": 8,\n            \"title\": \"Delectus voluptatibus similique qui inventore deserunt.\",\n            \"slug\": \"delectus-voluptatibus-similique-qui-inventore-deserunt\",\n            \"excerpt\": \"Odio aut cumque dolores consequatur ut. Qui est est aut libero. A ut sint ullam culpa. Quis qui sed et incidunt illo non\",\n            \"content\": \"Odio aut cumque dolores consequatur ut. Qui est est aut libero. A ut sint ullam culpa. Quis qui sed et incidunt illo non rerum qui. Unde libero facilis eos. Exercitationem reprehenderit omnis ea nihil quam ad deserunt. Velit et et dolorem accusamus voluptates sed. Commodi blanditiis deserunt modi eveniet tempore. Laboriosam est quae atque voluptatibus sunt et et. Et amet nobis molestias dolorum ea. Voluptatem commodi eveniet porro non veritatis accusamus. Officiis totam eveniet non eius. Est consequatur esse omnis optio ipsam enim illum sed. Voluptate eum qui sit id officiis similique a. Aut a quae qui aspernatur aut ut. Totam et et excepturi autem. Est voluptatem autem nisi a nostrum modi et. Expedita aspernatur harum ut numquam. Optio laudantium et omnis quibusdam. Dolores voluptatibus eum impedit architecto corporis vero. Voluptatem quae maxime nisi dolores. Eveniet quam aut tempora autem et quas. Quae rerum voluptatibus aperiam voluptatem praesentium tempora nam possimus. Explicabo quibusdam et recusandae veritatis optio quasi. Est aspernatur consequatur et. Quo consequuntur tenetur aut consequatur. Sunt inventore vel omnis esse asperiores qui voluptas. Est sint non quia quam dolorum. Quis sunt nisi placeat nihil. Id ut non modi eos earum quia. Ea magnam consequuntur est nemo totam. Illum reiciendis perspiciatis similique. Eaque eum nobis voluptas. Ut aut doloremque vel inventore laudantium nam enim. Omnis adipisci dicta maxime quia est eum. Minus natus quasi esse fugit ipsa.\"\n        },\n        {\n            \"id\": 9,\n            \"title\": \"Quibusdam sit ea qui facilis eveniet.\",\n            \"slug\": \"quibusdam-sit-ea-qui-facilis-eveniet\",\n            \"excerpt\": \"Sunt nobis alias totam natus sed sunt est facilis. Aut esse eius voluptatem nihil tenetur minus quisquam. Voluptas verit\",\n            \"content\": \"Sunt nobis alias totam natus sed sunt est facilis. Aut esse eius voluptatem nihil tenetur minus quisquam. Voluptas veritatis et libero praesentium voluptatem. Odit dignissimos debitis excepturi et dolores. Voluptates qui similique et occaecati illum accusantium aut. Ut quod exercitationem dolorem. Et atque harum voluptas nesciunt accusamus ullam quidem. Facere aut aut sapiente architecto illum quod. Et rerum porro totam consectetur nulla accusamus quaerat veritatis. Officiis sequi ut consequatur voluptate numquam eligendi. Velit placeat omnis recusandae. Dolores provident aperiam saepe doloremque unde. Officiis qui aut dolorem voluptate nostrum eos. Necessitatibus dolores laudantium sit non voluptatem nostrum placeat. Et illo doloribus expedita. Eum iste hic beatae commodi enim vel ea. Autem repudiandae consequatur officia qui aut rerum placeat optio. Cumque et dolorem accusantium pariatur non. Quia aperiam non nulla alias enim optio minima odio. Aliquam architecto molestiae corporis aut minima vero quibusdam. Excepturi enim autem id et nihil. Tempore ex expedita laudantium beatae omnis. Quo id labore ut consequatur et vel. Error quas doloribus est culpa. Et odit beatae qui perspiciatis placeat perspiciatis. Quae minima ad modi veritatis aperiam amet. Ratione optio aperiam est doloremque saepe. Quos molestiae dolores deserunt quam consequatur consectetur voluptas. Natus reiciendis magni eum perspiciatis veritatis. Eligendi fugiat at blanditiis exercitationem ducimus expedita optio.\"\n        },\n        {\n            \"id\": 10,\n            \"title\": \"Nisi iusto voluptatem voluptatum.\",\n            \"slug\": \"nisi-iusto-voluptatem-voluptatum\",\n            \"excerpt\": \"Modi aut eius hic sit facilis aliquid non. Animi culpa dolorem quos. Voluptatem maxime laborum modi assumenda qui volupt\",\n            \"content\": \"Modi aut eius hic sit facilis aliquid non. Animi culpa dolorem quos. Voluptatem maxime laborum modi assumenda qui voluptas eum nihil. Iusto nulla commodi blanditiis ratione. Rem enim iste omnis amet. Adipisci fugit inventore voluptatum eveniet optio sint. Nesciunt cupiditate est sed repellendus et rerum. Natus dolores est maiores blanditiis ab explicabo dolores. Rem doloremque molestiae dolorum optio. Expedita eaque et autem tempore placeat dolorum debitis ut. Nesciunt pariatur magni maiores ut quo. Et occaecati autem autem consequatur. Autem accusantium porro aliquam nostrum modi et repellendus. Consequatur magni et aut quia dolores et. Rerum et sunt quis consequatur harum quo officia et. Adipisci aspernatur quos sunt enim quas. Sint illum impedit hic sed a. Repellendus omnis magnam asperiores sint dolor. Pariatur et vero repellat quos atque quod aperiam. Autem commodi qui et eum et rerum et ut. Voluptatibus tempora nihil qui dolorem. Dolorum aut totam et quis quam maxime. A ea magnam odio eius et ipsa est. Laudantium odio labore quod modi excepturi. Nemo eveniet deleniti officiis est nam quaerat itaque. Non molestiae minima autem placeat aut aliquid. Eos reiciendis dolorem qui in magnam. Earum dolorem asperiores consequatur earum eius sed. Ad eveniet asperiores accusamus sunt eaque. Molestiae sed occaecati expedita voluptas quis ipsam. Aut nulla ullam nostrum autem doloremque. Qui consequatur omnis nam ducimus officiis hic. Aut voluptates debitis repellendus quo.\"\n        },\n        {\n            \"id\": 11,\n            \"title\": \"Aut adipisci totam ea et et necessitatibus.\",\n            \"slug\": \"aut-adipisci-totam-ea-et-et-necessitatibus\",\n            \"excerpt\": \"Iste reiciendis eaque quibusdam eos. Quis laborum inventore adipisci dolore. Ratione iusto alias vel at corporis quam. A\",\n            \"content\": \"Iste reiciendis eaque quibusdam eos. Quis laborum inventore adipisci dolore. Ratione iusto alias vel at corporis quam. Autem id voluptas rerum dolor totam eum sapiente. Odit aut voluptatem voluptatem vitae hic sed id. Tenetur perspiciatis est dolor natus voluptatem odio alias. Voluptatem officia velit culpa quisquam. Officiis molestiae quasi quia aut. Ut distinctio magni fuga consequatur dignissimos quo qui asperiores. Praesentium expedita ipsum esse dolore. Necessitatibus harum minima veritatis sequi. Numquam qui similique adipisci expedita et. Quo nostrum facere officiis corrupti vel. Ducimus debitis est possimus aspernatur pariatur rerum sint. Cumque consequatur voluptatem sit voluptatibus sit autem ut. Qui qui beatae voluptatem impedit nam. Et unde deleniti aperiam quis sed. Atque suscipit ducimus est sit possimus delectus quia. Doloribus dolor dolorem ducimus quibusdam. Nesciunt dolorem laboriosam et voluptatum. Qui corporis pariatur hic voluptatem suscipit ipsam error. Eos minus quod expedita velit ut dicta est. Ut eligendi perspiciatis a non ducimus occaecati. Aut maxime amet et aut aut atque. Ipsum debitis nihil soluta quia et saepe tempore. Voluptas beatae nihil accusamus. Cum sit optio ut consectetur iusto quibusdam. Laudantium quae minus est atque voluptas. Asperiores et nihil commodi eius. Non incidunt ut quo debitis voluptates. Ullam a atque quasi quia quia. Officia voluptates labore porro nostrum voluptas corporis repellat. Voluptatem similique qui sunt consequatur. Fugiat ipsam et officia omnis consequatur qui.\"\n        },\n        {\n            \"id\": 12,\n            \"title\": \"In dolores eum amet est repudiandae doloremque.\",\n            \"slug\": \"in-dolores-eum-amet-est-repudiandae-doloremque\",\n            \"excerpt\": \"Et labore facilis aliquid veniam nobis fugiat. Minima quae cum rem porro sunt voluptas. Delectus et autem quis quia volu\",\n            \"content\": \"Et labore facilis aliquid veniam nobis fugiat. Minima quae cum rem porro sunt voluptas. Delectus et autem quis quia voluptates. Et magni maiores molestias voluptas sapiente quaerat. Ducimus voluptatem cum nobis sed eum et ut dolores. Neque incidunt voluptatem ut in aut provident. Ipsam repudiandae blanditiis earum in nihil. Numquam dignissimos id quos dicta. Cum illo ea quibusdam voluptates. Est consequatur tempore unde. Nesciunt et cupiditate itaque quae aspernatur sequi. Porro placeat distinctio adipisci architecto error labore. Sequi cum similique velit ex. Quidem veniam doloremque alias quos consequuntur. Rem debitis exercitationem nihil autem vero. Dicta voluptas quia ullam animi cum alias qui. Ad dolores quis sapiente alias. Repellat molestiae illo pariatur accusamus fuga cupiditate et. Molestias repellat voluptas commodi. Iste sit cum earum voluptatibus magni sunt distinctio. Veniam consequatur itaque id dolores. Non assumenda natus est totam. Deleniti corrupti expedita soluta consequatur id. Quia placeat sequi aut illum magnam odit sed. Voluptatum est ipsam voluptate et ipsam. Id voluptatem laudantium eveniet. Quasi ea nostrum dolorem ratione qui modi. Quo voluptas dicta vel similique nihil. Et mollitia suscipit libero beatae. In delectus ratione quia enim quia repellat. Et cum vel omnis hic et voluptates tempora aspernatur. Sint architecto est repellendus velit dolore animi nihil dolor. Ut dolorum saepe aut illo explicabo. Non quae voluptas tempora facilis dolorem hic doloremque. Dolores eligendi temporibus laboriosam rerum error sint deleniti.\"\n        },\n        {\n            \"id\": 13,\n            \"title\": \"Commodi occaecati corrupti qui minima esse adipisci.\",\n            \"slug\": \"commodi-occaecati-corrupti-qui-minima-esse-adipisci\",\n            \"excerpt\": \"Ipsum qui exercitationem quibusdam voluptatem voluptatem vel quia odio. Natus rerum assumenda sit et et distinctio non. \",\n            \"content\": \"Ipsum qui exercitationem quibusdam voluptatem voluptatem vel quia odio. Natus rerum assumenda sit et et distinctio non. Voluptas dolorem omnis eius. Voluptatibus ipsum ad ut sit quas eveniet. Cupiditate autem nam dicta id. Fugit quia velit culpa rerum optio ipsa dolorum. Esse eveniet vero consequatur eum. Dolorum omnis neque dolorum et ut dolor. At magnam est distinctio omnis voluptates. Porro ut quae et qui ut similique magnam consectetur. Dolorem sed aspernatur vel optio sequi odio. Aut velit non quaerat corporis. Ipsum minima velit sed eligendi distinctio. Et at inventore sint sequi. Esse officia occaecati officia saepe at dolorum. Sunt id non ut error esse id sunt. Ea cumque corrupti impedit nesciunt. Atque nisi saepe voluptates et quod excepturi non. Quos quasi hic eos quo eum. Ut eos consectetur earum voluptas eligendi quod qui. Quo qui modi recusandae ut accusamus est. Ut ut molestiae alias inventore. Laudantium officia pariatur molestias quia sapiente. Eos a asperiores et sunt id nulla aut. Commodi sit voluptas perferendis omnis expedita quia. Perferendis est ullam nemo impedit illo natus magni aperiam. Iste possimus quia maxime qui aliquid et iste. Sit quia aperiam est enim sit. Impedit dolore aut dolore suscipit aut qui quas. Id sint soluta molestias numquam dolor autem. A enim error sint illo sunt. Aut occaecati earum velit nemo voluptatem.\"\n        },\n        {\n            \"id\": 14,\n            \"title\": \"Sed doloremque itaque earum non maiores eius.\",\n            \"slug\": \"sed-doloremque-itaque-earum-non-maiores-eius\",\n            \"excerpt\": \"Sed autem in eum qui harum. Saepe ut nulla harum enim. Ex alias quia facere harum tempora quia commodi perferendis. Quae\",\n            \"content\": \"Sed autem in eum qui harum. Saepe ut nulla harum enim. Ex alias quia facere harum tempora quia commodi perferendis. Quae dolores iusto eaque sit expedita doloremque. Temporibus libero consequatur eos. Voluptas id esse perferendis aut illo qui. Et sint sit rerum quia iste qui aut. Vel aspernatur itaque omnis. Omnis autem consequatur earum eos corrupti est et sunt. Laboriosam quaerat adipisci expedita ipsum aliquid sed. Nostrum ad magni quibusdam numquam. Dolorem optio repudiandae et quae repudiandae asperiores qui. Beatae aut excepturi vel accusantium velit. Autem nesciunt reiciendis nostrum quo perferendis doloremque magnam eos. Error deleniti animi maxime impedit aut voluptatem repudiandae. Quidem quas unde nemo. Odit aut minima eaque non maxime. Et animi quia corrupti similique corrupti similique. Est cumque iure reprehenderit aut. Perferendis est sunt quia delectus. Quia consequuntur occaecati et et ullam. Sint totam eos aspernatur deleniti ad vitae rem. Illum sint quia deserunt iure incidunt est dolores. Doloremque ut quaerat consequuntur et molestiae quam. Nihil consequuntur autem veniam dicta sunt temporibus. Alias amet velit at consequatur consequatur. Veritatis eaque laudantium pariatur sed corporis. Possimus enim ut cum maxime sequi accusamus. Provident a ex voluptatem et quos similique praesentium. Omnis fugit qui tenetur voluptates totam. Dolorem consequuntur nihil deserunt explicabo natus accusamus quia. Voluptatem quam molestiae et. Nemo aperiam voluptates id deleniti nisi. Atque enim odit aut animi voluptate temporibus ea.\"\n        },\n        {\n            \"id\": 15,\n            \"title\": \"Doloribus voluptas in rem corporis sed asperiores.\",\n            \"slug\": \"doloribus-voluptas-in-rem-corporis-sed-asperiores\",\n            \"excerpt\": \"Sequi soluta expedita aut sit laudantium voluptatem. Deleniti autem vel expedita sequi consequatur sint. Consequuntur pe\",\n            \"content\": \"Sequi soluta expedita aut sit laudantium voluptatem. Deleniti autem vel expedita sequi consequatur sint. Consequuntur perspiciatis harum aut eum consequuntur aspernatur atque. Repudiandae corrupti quia dolores doloremque minus. Dolore iusto et laboriosam unde. Quas expedita dolorum sequi repudiandae nobis. At fugiat et iste non ut tenetur dolorem quis. Quibusdam in dolorem enim voluptatem. Voluptates ab cum eligendi rem voluptate a ut. Impedit sit ab est assumenda quibusdam. Ipsa mollitia soluta unde et. Dicta ut veritatis aut. Et sed dolores ab fuga enim voluptas facere. Ea fuga voluptas ut. In optio possimus aperiam rem. Sequi dolores excepturi aut eius ratione. Dignissimos voluptatibus velit eligendi omnis. Atque reprehenderit aut possimus iste ut officia est. Magnam eveniet maiores perferendis maiores minus eius similique. Consequatur optio sed repellendus rerum. Sint dolorum et modi omnis doloribus eos. Officiis quae sit consectetur consectetur aliquam fuga. Illum ut doloribus fugiat quae quidem. Totam sunt nobis asperiores molestiae aliquid. Ut eligendi porro molestiae officiis vero. Et et modi nam ea eum. Quis deserunt voluptatem facilis ducimus labore aspernatur ut. Ipsam ratione rerum eos quia quibusdam autem ducimus. Labore illum ratione error dolores mollitia. Est impedit et et. Possimus ut et voluptates minima. Rerum voluptatibus ut minus accusantium. Quibusdam possimus autem optio repellat ipsa. Maxime tempore porro non reprehenderit asperiores. Adipisci tenetur beatae et ratione. Voluptatem exercitationem nisi non ullam.\"\n        },\n        {\n            \"id\": 1,\n            \"title\": \"Impedit laborum expedita id illo praesentium provident.\",\n            \"slug\": \"impedit-laborum-expedita-id-illo-praesentium-provident\",\n            \"excerpt\": \"Aut illum odio velit magnam. Esse sint in unde qui praesentium. Asperiores quia rem et impedit et omnis. Illum corporis \",\n            \"content\": \"Aut illum odio velit magnam. Esse sint in unde qui praesentium. Asperiores quia rem et impedit et omnis. Illum corporis et dolores explicabo recusandae. Veniam suscipit consequatur tenetur est sed. Nobis rerum cum occaecati aut a. Distinctio earum voluptatem similique ea suscipit eaque ut eum. Aliquam rem et cupiditate. Cumque temporibus sequi animi et. Et eum repellendus qui aspernatur officiis. Nulla et voluptatum impedit omnis distinctio quos harum porro. Rerum soluta molestiae sed praesentium. Est sint optio ut provident quisquam saepe quos. Temporibus aut pariatur voluptate exercitationem autem est. Et quam sunt numquam et dolores ducimus. Ipsa sit alias quis. Tenetur pariatur voluptas exercitationem ut praesentium in modi. Quia aut aut velit rerum dolorem. Odit dolorem id voluptas non sequi. Eaque recusandae magnam maxime tempore recusandae eveniet veniam. Et molestias explicabo facere magnam dolor autem et. Magni occaecati iure corrupti nulla enim dolores illo. Odit labore totam assumenda doloremque et autem. Consectetur reprehenderit dolor odio provident est. Fugit saepe et dolores occaecati veniam id commodi. Omnis qui officia totam voluptas rerum eveniet. Tempore explicabo blanditiis quo laboriosam nemo. Eaque et et eaque amet nobis ut et. Sint labore rem aut officia. Sit accusantium qui illo et. Harum quo similique ea in aut impedit exercitationem. Voluptatem et repellat suscipit sunt qui modi qui. Ut at non fugiat sed modi nemo ipsam. Error qui sunt tempora aut omnis sint magnam quas. Nam in perspiciatis qui saepe est inventore molestias.\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:8000/api/v1/posts?page=1\",\n        \"last\": \"http://localhost:8000/api/v1/posts?page=8\",\n        \"prev\": null,\n        \"next\": \"http://localhost:8000/api/v1/posts?page=2\"\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 8,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/posts?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/posts?page=2\",\n                \"label\": \"2\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/posts?page=3\",\n                \"label\": \"3\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/posts?page=4\",\n                \"label\": \"4\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/posts?page=5\",\n                \"label\": \"5\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/posts?page=6\",\n                \"label\": \"6\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/posts?page=7\",\n                \"label\": \"7\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/posts?page=8\",\n                \"label\": \"8\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/posts?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost:8000/api/v1/posts\",\n        \"per_page\": 15,\n        \"to\": 15,\n        \"total\": 120\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Post by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url_v1}}/posts/9",
+							"host": [
+								"{{url_v1}}"
+							],
+							"path": [
+								"posts",
+								"9"
+							]
+						},
+						"description": "# Get Post Details\n\nThis endpoint makes an HTTP GET request to retrieve details of a specific post.\n\n### Request Body\n\nThis request does not require a request body.\n\n### Response Body\n\nThe response will contain a JSON object with the following fields:\n\n- `id` (number): The unique identifier of the post.\n    \n- `title` (string): The title of the post.\n    \n- `slug` (string): The slug of the post.\n    \n- `excerpt` (string): A brief excerpt of the post content.\n    \n- `content` (string): The full content of the post.\n    \n\n### Example\n\n``` json\n{\n    \"data\": {\n        \"id\": 0,\n        \"title\": \"\",\n        \"slug\": \"\",\n        \"excerpt\": \"\",\n        \"content\": \"\"\n    }\n}\n\n ```"
+					},
+					"response": [
+						{
+							"name": "Post by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/v1/posts/10",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"posts",
+										"10"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.7"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Dec 2024 14:39:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 10,\n        \"title\": \"Nisi iusto voluptatem voluptatum.\",\n        \"slug\": \"nisi-iusto-voluptatem-voluptatum\",\n        \"excerpt\": \"Modi aut eius hic sit facilis aliquid non. Animi culpa dolorem quos. Voluptatem maxime laborum modi assumenda qui volupt\",\n        \"content\": \"Modi aut eius hic sit facilis aliquid non. Animi culpa dolorem quos. Voluptatem maxime laborum modi assumenda qui voluptas eum nihil. Iusto nulla commodi blanditiis ratione. Rem enim iste omnis amet. Adipisci fugit inventore voluptatum eveniet optio sint. Nesciunt cupiditate est sed repellendus et rerum. Natus dolores est maiores blanditiis ab explicabo dolores. Rem doloremque molestiae dolorum optio. Expedita eaque et autem tempore placeat dolorum debitis ut. Nesciunt pariatur magni maiores ut quo. Et occaecati autem autem consequatur. Autem accusantium porro aliquam nostrum modi et repellendus. Consequatur magni et aut quia dolores et. Rerum et sunt quis consequatur harum quo officia et. Adipisci aspernatur quos sunt enim quas. Sint illum impedit hic sed a. Repellendus omnis magnam asperiores sint dolor. Pariatur et vero repellat quos atque quod aperiam. Autem commodi qui et eum et rerum et ut. Voluptatibus tempora nihil qui dolorem. Dolorum aut totam et quis quam maxime. A ea magnam odio eius et ipsa est. Laudantium odio labore quod modi excepturi. Nemo eveniet deleniti officiis est nam quaerat itaque. Non molestiae minima autem placeat aut aliquid. Eos reiciendis dolorem qui in magnam. Earum dolorem asperiores consequatur earum eius sed. Ad eveniet asperiores accusamus sunt eaque. Molestiae sed occaecati expedita voluptas quis ipsam. Aut nulla ullam nostrum autem doloremque. Qui consequatur omnis nam ducimus officiis hic. Aut voluptates debitis repellendus quo.\"\n    }\n}"
+						},
+						{
+							"name": "Post by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/v1/posts/10",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"posts",
+										"10"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.7"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Dec 2024 14:39:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 10,\n        \"title\": \"Nisi iusto voluptatem voluptatum.\",\n        \"slug\": \"nisi-iusto-voluptatem-voluptatum\",\n        \"excerpt\": \"Modi aut eius hic sit facilis aliquid non. Animi culpa dolorem quos. Voluptatem maxime laborum modi assumenda qui volupt\",\n        \"content\": \"Modi aut eius hic sit facilis aliquid non. Animi culpa dolorem quos. Voluptatem maxime laborum modi assumenda qui voluptas eum nihil. Iusto nulla commodi blanditiis ratione. Rem enim iste omnis amet. Adipisci fugit inventore voluptatum eveniet optio sint. Nesciunt cupiditate est sed repellendus et rerum. Natus dolores est maiores blanditiis ab explicabo dolores. Rem doloremque molestiae dolorum optio. Expedita eaque et autem tempore placeat dolorum debitis ut. Nesciunt pariatur magni maiores ut quo. Et occaecati autem autem consequatur. Autem accusantium porro aliquam nostrum modi et repellendus. Consequatur magni et aut quia dolores et. Rerum et sunt quis consequatur harum quo officia et. Adipisci aspernatur quos sunt enim quas. Sint illum impedit hic sed a. Repellendus omnis magnam asperiores sint dolor. Pariatur et vero repellat quos atque quod aperiam. Autem commodi qui et eum et rerum et ut. Voluptatibus tempora nihil qui dolorem. Dolorum aut totam et quis quam maxime. A ea magnam odio eius et ipsa est. Laudantium odio labore quod modi excepturi. Nemo eveniet deleniti officiis est nam quaerat itaque. Non molestiae minima autem placeat aut aliquid. Eos reiciendis dolorem qui in magnam. Earum dolorem asperiores consequatur earum eius sed. Ad eveniet asperiores accusamus sunt eaque. Molestiae sed occaecati expedita voluptas quis ipsam. Aut nulla ullam nostrum autem doloremque. Qui consequatur omnis nam ducimus officiis hic. Aut voluptates debitis repellendus quo.\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Soft delete Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url_v1}}/posts/10",
+							"host": [
+								"{{url_v1}}"
+							],
+							"path": [
+								"posts",
+								"10"
+							]
+						},
+						"description": "### Delete Post\n\nThis endpoint is used to delete a specific post by its ID.\n\n#### Request\n\n- Method: DELETE\n    \n- URL: `{{url_v1}}/posts/10`\n    \n\n#### Response\n\nThe response for this request can be described using the following JSON schema:\n\n``` json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"status\": {\"type\": \"string\"},\n    \"message\": {\"type\": \"string\"},\n    \"post\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"id\": {\"type\": \"integer\"},\n        \"user_id\": {\"type\": \"integer\"},\n        \"title\": {\"type\": \"string\"},\n        \"slug\": {\"type\": \"string\"},\n        \"content\": {\"type\": \"string\"},\n        \"created_at\": {\"type\": \"string\"},\n        \"updated_at\": {\"type\": \"string\"},\n        \"deleted_at\": {\"type\": \"string\"}\n      }\n    }\n  }\n}\n\n ```"
+					},
+					"response": [
+						{
+							"name": "Soft delete Post",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/v1/posts/10",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"posts",
+										"10"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.7"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Dec 2024 14:41:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"sucess\",\n    \"message\": \"post was deleted\",\n    \"post\": {\n        \"id\": 10,\n        \"user_id\": 2,\n        \"title\": \"Nisi iusto voluptatem voluptatum.\",\n        \"slug\": \"nisi-iusto-voluptatem-voluptatum\",\n        \"content\": \"Modi aut eius hic sit facilis aliquid non. Animi culpa dolorem quos. Voluptatem maxime laborum modi assumenda qui voluptas eum nihil. Iusto nulla commodi blanditiis ratione. Rem enim iste omnis amet. Adipisci fugit inventore voluptatum eveniet optio sint. Nesciunt cupiditate est sed repellendus et rerum. Natus dolores est maiores blanditiis ab explicabo dolores. Rem doloremque molestiae dolorum optio. Expedita eaque et autem tempore placeat dolorum debitis ut. Nesciunt pariatur magni maiores ut quo. Et occaecati autem autem consequatur. Autem accusantium porro aliquam nostrum modi et repellendus. Consequatur magni et aut quia dolores et. Rerum et sunt quis consequatur harum quo officia et. Adipisci aspernatur quos sunt enim quas. Sint illum impedit hic sed a. Repellendus omnis magnam asperiores sint dolor. Pariatur et vero repellat quos atque quod aperiam. Autem commodi qui et eum et rerum et ut. Voluptatibus tempora nihil qui dolorem. Dolorum aut totam et quis quam maxime. A ea magnam odio eius et ipsa est. Laudantium odio labore quod modi excepturi. Nemo eveniet deleniti officiis est nam quaerat itaque. Non molestiae minima autem placeat aut aliquid. Eos reiciendis dolorem qui in magnam. Earum dolorem asperiores consequatur earum eius sed. Ad eveniet asperiores accusamus sunt eaque. Molestiae sed occaecati expedita voluptas quis ipsam. Aut nulla ullam nostrum autem doloremque. Qui consequatur omnis nam ducimus officiis hic. Aut voluptates debitis repellendus quo.\",\n        \"created_at\": \"2024-12-27T14:35:00.000000Z\",\n        \"updated_at\": \"2024-12-27T14:41:03.000000Z\",\n        \"deleted_at\": \"2024-12-27T14:41:03.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Hard delete post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url_v1}}/hard-posts-delete/10",
+							"host": [
+								"{{url_v1}}"
+							],
+							"path": [
+								"hard-posts-delete",
+								"10"
+							]
+						},
+						"description": "### Delete Hard Post\n\nThis endpoint is used to delete a specific post. First you need soft delete post.\n\n#### Request\n\n- Method: DELETE\n    \n- URL: `{{url_v1}}/hard-posts-delete/10`\n    \n\n#### Response\n\nThe response for this request can be described using the following JSON schema:\n\n``` json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"status\": {\"type\": \"string\"},\n    \"message\": {\"type\": \"string\"},\n    \"post\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"id\": {\"type\": \"integer\"},\n        \"user_id\": {\"type\": \"integer\"},\n        \"title\": {\"type\": \"string\"},\n        \"slug\": {\"type\": \"string\"},\n        \"content\": {\"type\": \"string\"},\n        \"created_at\": {\"type\": \"string\"},\n        \"updated_at\": {\"type\": \"string\"},\n        \"deleted_at\": {\"type\": \"string\"}\n      }\n    }\n  }\n}\n\n ```"
+					},
+					"response": [
+						{
+							"name": "Error Hard Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/v1/hard-posts-delete/3",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"hard-posts-delete",
+										"3"
+									]
+								}
+							},
+							"status": "Method Not Allowed",
+							"code": 405,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.7"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Dec 2024 14:41:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": 23213,\n    \"message\": \"Error, posts don't was soft delete\"\n}"
+						},
+						{
+							"name": "Hard delete post",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/v1/hard-posts-delete/10",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"hard-posts-delete",
+										"10"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.7"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Dec 2024 14:42:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"sucess\",\n    \"message\": \"post was deleted\",\n    \"post\": {\n        \"id\": 10,\n        \"user_id\": 2,\n        \"title\": \"Nisi iusto voluptatem voluptatum.\",\n        \"slug\": \"nisi-iusto-voluptatem-voluptatum\",\n        \"content\": \"Modi aut eius hic sit facilis aliquid non. Animi culpa dolorem quos. Voluptatem maxime laborum modi assumenda qui voluptas eum nihil. Iusto nulla commodi blanditiis ratione. Rem enim iste omnis amet. Adipisci fugit inventore voluptatum eveniet optio sint. Nesciunt cupiditate est sed repellendus et rerum. Natus dolores est maiores blanditiis ab explicabo dolores. Rem doloremque molestiae dolorum optio. Expedita eaque et autem tempore placeat dolorum debitis ut. Nesciunt pariatur magni maiores ut quo. Et occaecati autem autem consequatur. Autem accusantium porro aliquam nostrum modi et repellendus. Consequatur magni et aut quia dolores et. Rerum et sunt quis consequatur harum quo officia et. Adipisci aspernatur quos sunt enim quas. Sint illum impedit hic sed a. Repellendus omnis magnam asperiores sint dolor. Pariatur et vero repellat quos atque quod aperiam. Autem commodi qui et eum et rerum et ut. Voluptatibus tempora nihil qui dolorem. Dolorum aut totam et quis quam maxime. A ea magnam odio eius et ipsa est. Laudantium odio labore quod modi excepturi. Nemo eveniet deleniti officiis est nam quaerat itaque. Non molestiae minima autem placeat aut aliquid. Eos reiciendis dolorem qui in magnam. Earum dolorem asperiores consequatur earum eius sed. Ad eveniet asperiores accusamus sunt eaque. Molestiae sed occaecati expedita voluptas quis ipsam. Aut nulla ullam nostrum autem doloremque. Qui consequatur omnis nam ducimus officiis hic. Aut voluptates debitis repellendus quo.\",\n        \"created_at\": \"2024-12-27T14:35:00.000000Z\",\n        \"updated_at\": \"2024-12-27T14:41:03.000000Z\",\n        \"deleted_at\": \"2024-12-27T14:41:03.000000Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "V1 del blog"
+		},
+		{
+			"name": "Login user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "abraham@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "macos",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url_base}}/login/",
+					"host": [
+						"{{url_base}}"
+					],
+					"path": [
+						"login",
+						""
+					]
+				},
+				"description": "### Login\n\nThis endpoint is used to authenticate and login a user.\n\n**Request Body**\n\n- No parameters required for the form-data request body type.\n    \n\n**Response**\n\n- `token` (string, required): The authentication token for the logged in user.\n    \n- `message` (string, required): A message indicating the result of the login attempt.\n    \n\n#### Example Response\n\n``` json\n{\n    \"token\": \"**********\",\n    \"message\": \"**********\"\n}\n\n ```"
+			},
+			"response": [
+				{
+					"name": "Login user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "abraham@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "macos",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/login/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.7"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 27 Dec 2024 14:35:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"1|mI0HOuzmBow58c7UDOO0jmnrVORgjQghTzVV0DAt736d8f8a\",\n    \"message\": \"success\"\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "inherit"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "1|mI0HOuzmBow58c7UDOO0jmnrVORgjQghTzVV0DAt736d8f8a",
+			"type": "string"
+		},
+		{
+			"key": "url_v1",
+			"value": "localhost:8000/api/v1",
+			"type": "string"
+		},
+		{
+			"key": "url_v2",
+			"value": "localhost:8000/api/v2",
+			"type": "string"
+		},
+		{
+			"key": "url_base",
+			"value": "localhost:8000/api",
+			"type": "string"
+		}
+	]
+}
