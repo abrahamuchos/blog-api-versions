@@ -3,15 +3,22 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    public function login(Request $request)
+    /**
+     * @param Request $request
+     *
+     * @return JsonResponse
+     */
+    public function login(Request $request): JsonResponse
     {
-        $this->validateLogin($request);
+        $this->_validateLogin($request);
         $credentials = $request->only('email', 'password');
+
         if (Auth::attempt($credentials)) {
             return response()->json([
                 'token' => $request->user()->createToken($request->name)->plainTextToken,
@@ -25,9 +32,14 @@ class LoginController extends Controller
         }
     }
 
-    private function validateLogin(Request $request)
+    /**
+     * @param Request $request
+     *
+     * @return void
+     */
+    private function _validateLogin(Request $request): void
     {
-        return $request->validate([
+        $request->validate([
             'email' => 'required|email',
             'password' => 'required',
             'name' => 'required' // determina desde que dispositivo conecta

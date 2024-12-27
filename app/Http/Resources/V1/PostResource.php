@@ -4,6 +4,14 @@ namespace App\Http\Resources\V1;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
+/**
+ * @property int    $id
+ * @property int    $user_id
+ * @property string $title
+ * @property string $slug
+ * @property string $content
+ * @property string $excerpt
+ */
 class PostResource extends JsonResource
 {
     /**
@@ -12,7 +20,7 @@ class PostResource extends JsonResource
      * @param  \Illuminate\Http\Request  $request
      * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
      */
-    public function toArray($request)
+    public function toArray($request): array|\JsonSerializable|\Illuminate\Contracts\Support\Arrayable
     {
         return [
             'id' => $this->id,

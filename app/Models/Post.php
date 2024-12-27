@@ -8,26 +8,52 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
+/**
+ * App\Models\Post
+ *
+ * @property int $id
+ * @property int $user_id
+ * @property string $title
+ * @property string $slug
+ * @property string $content
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property-read mixed $excerpt
+ * @property-read mixed $published_at
+ * @property-read \App\Models\User $user
+ * @method static \Database\Factories\PostFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|Post newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Post newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Post onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Post query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereContent($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereSlug($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Post withoutTrashed()
+ * @mixin \Eloquent
+ */
 class Post extends Model
 {
-    use HasFactory,
-        SoftDeletes;
+    use HasFactory, SoftDeletes;
 
 
-    // Dos formas de hacer un accesor (Mutator)
-    /**
-     *  Accesor to shorten words of the content
-     */
+    // Otra forma de hacer un Accessor (Mutator)
     // public function getExcerptAttribute()
     // {
     //     return substr($this->content, 0, 120);
     // }
 
-
     /**
-     * Accesor to shorten words of the content
+     * Accessor to shorten words of the content
      *
-     * @return Illuminate\Database\Eloquent\Casts\Attribute
+     * @return Attribute
      */
     protected function excerpt(): Attribute
     {
@@ -37,20 +63,16 @@ class Post extends Model
     }
 
 
-    //Dos formas de hacer un Accesor
-    /**
-     * Format attribute to create day
-     * @return [Object]
-     */
+    //Otra forma de hacer un Accessor (Mutator)
     // public function getPublishedAtAttribute()
     // {
     //     return $this->created_at->format('d/m/Y');
     // }
 
     /**
-     * Accesor to format published post
+     * Accessor to format published post
      *
-     * @return Illuminate\Database\Eloquent\Casts\Attribute
+     * @return Attribute
      */
     protected function publishedAt(): Attribute
     {
@@ -61,7 +83,7 @@ class Post extends Model
     }
 
     /**
-     * @return Illuminate\Database\Eloquent\Concerns\HasRelationships::belongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function user()
     {
